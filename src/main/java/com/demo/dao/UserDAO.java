@@ -1,7 +1,9 @@
 package com.demo.dao;
 
 import com.demo.model.UserDO;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface UserDAO {
     int deleteByPrimaryKey(Integer id);
 
