@@ -2,7 +2,7 @@ package com.demo.dao;
 
 import com.demo.model.UserDO;
 
-public interface UserDOMapper {
+public interface UserDAO {
     int deleteByPrimaryKey(Integer id);
 
     int insert(UserDO record);
