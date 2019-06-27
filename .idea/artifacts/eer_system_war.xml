@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="eer_system:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="eer_system-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="eer_system:war exploded" />
+    </root>
+  </artifact>
+</component>
