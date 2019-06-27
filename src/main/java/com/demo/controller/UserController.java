@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 @Controller
 public class UserController {
     @Resource
-    UserService userService;
+    private UserService userService;
 
     @GetMapping("/userlist")
     public String name(Model model){

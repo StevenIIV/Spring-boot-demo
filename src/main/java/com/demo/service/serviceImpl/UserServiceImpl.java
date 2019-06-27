@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 
 public class UserServiceImpl implements UserService {
     @Resource
-    UserDAO userDAO;
+    private UserDAO userDAO;
     @Override
     public UserDO getUserDOById(Integer id) {
         return userDAO.selectByPrimaryKey(id);
