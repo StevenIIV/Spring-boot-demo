@@ -17,7 +17,7 @@ public class UserDO {
 
     private String job;
 
-    private String teleNumber;
+    private String telenumber;
 
     public Integer getId() {
         return id;
@@ -83,11 +83,11 @@ public class UserDO {
         this.job = job == null ? null : job.trim();
     }
 
-    public String getTeleNumber() {
-        return teleNumber;
+    public String getTelenumber() {
+        return telenumber;
     }
 
-    public void setTeleNumber(String teleNumber) {
-        this.teleNumber = teleNumber == null ? null : teleNumber.trim();
+    public void setTelenumber(String telenumber) {
+        this.telenumber = telenumber == null ? null : telenumber.trim();
     }
 }

@@ -10,10 +10,10 @@
     <result column="department" jdbcType="VARCHAR" property="department" />
     <result column="authority" jdbcType="VARCHAR" property="authority" />
     <result column="job" jdbcType="VARCHAR" property="job" />
-    <result column="tele_number" jdbcType="VARCHAR" property="teleNumber" />
+    <result column="teleNumber" jdbcType="VARCHAR" property="telenumber" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, username, password, sex, groups, department, authority, job, tele_number
+    id, username, password, sex, groups, department, authority, job, teleNumber
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -28,11 +28,11 @@
   <insert id="insert" parameterType="com.demo.model.UserDO">
     insert into user (id, username, password, 
       sex, groups, department, 
-      authority, job, tele_number
+      authority, job, teleNumber
       )
     values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{sex,jdbcType=VARCHAR}, #{groups,jdbcType=VARCHAR}, #{department,jdbcType=VARCHAR}, 
-      #{authority,jdbcType=VARCHAR}, #{job,jdbcType=VARCHAR}, #{teleNumber,jdbcType=VARCHAR}
+      #{authority,jdbcType=VARCHAR}, #{job,jdbcType=VARCHAR}, #{telenumber,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.demo.model.UserDO">
@@ -62,8 +62,8 @@
       <if test="job != null">
         job,
       </if>
-      <if test="teleNumber != null">
-        tele_number,
+      <if test="telenumber != null">
+        teleNumber,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -91,8 +91,8 @@
       <if test="job != null">
         #{job,jdbcType=VARCHAR},
       </if>
-      <if test="teleNumber != null">
-        #{teleNumber,jdbcType=VARCHAR},
+      <if test="telenumber != null">
+        #{telenumber,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -120,8 +120,8 @@
       <if test="job != null">
         job = #{job,jdbcType=VARCHAR},
       </if>
-      <if test="teleNumber != null">
-        tele_number = #{teleNumber,jdbcType=VARCHAR},
+      <if test="telenumber != null">
+        teleNumber = #{telenumber,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -135,7 +135,7 @@
       department = #{department,jdbcType=VARCHAR},
       authority = #{authority,jdbcType=VARCHAR},
       job = #{job,jdbcType=VARCHAR},
-      tele_number = #{teleNumber,jdbcType=VARCHAR}
+      teleNumber = #{telenumber,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
